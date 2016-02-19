@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Mc5-Aa-aED">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="d2f-ei-xMX">
+            <objects>
+                <navigationController id="Mc5-Aa-aED" customClass="CustomNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DGO-5G-fRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q9h-bF-ibE" kind="relationship" relationship="rootViewController" id="45S-h3-xoB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4X-zo-eXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220.26666666666665" y="729.88"/>
+        </scene>
+        <!--微博-->
+        <scene sceneID="Gze-5M-i58">
+            <objects>
+                <viewController id="Q9h-bF-ibE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UKN-wH-lRe"/>
+                        <viewControllerLayoutGuide type="bottom" id="del-Lo-R40"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CMY-9D-6Om">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weibo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-jh-pP4">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVJ-Rd-x5u">
+                                <rect key="frame" x="114" y="299" width="93" height="33"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="dgN-tw-94A" kind="push" id="uIu-q3-BmB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="del-Lo-R40" firstAttribute="top" secondItem="Th6-jh-pP4" secondAttribute="bottom" id="3oF-qD-G8i"/>
+                            <constraint firstAttribute="trailing" secondItem="Th6-jh-pP4" secondAttribute="trailing" id="88T-1k-qOw"/>
+                            <constraint firstItem="Th6-jh-pP4" firstAttribute="leading" secondItem="CMY-9D-6Om" secondAttribute="leading" id="ZCU-5z-x3m"/>
+                            <constraint firstItem="Th6-jh-pP4" firstAttribute="top" secondItem="UKN-wH-lRe" secondAttribute="bottom" id="fve-uW-rXh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="微博" id="v2k-el-Bh2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1tI-cc-d8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="729"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ydQ-PS-oi9">
+            <objects>
+                <viewController id="dgN-tw-94A" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zdg-VX-LhL"/>
+                        <viewControllerLayoutGuide type="bottom" id="gZF-vc-YXr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C0Y-Ra-ufE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-oj-j0f">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7HO-oj-j0f" firstAttribute="top" secondItem="zdg-VX-LhL" secondAttribute="bottom" id="EvU-Dn-Pd3"/>
+                            <constraint firstItem="gZF-vc-YXr" firstAttribute="top" secondItem="7HO-oj-j0f" secondAttribute="bottom" id="JFR-zr-qL9"/>
+                            <constraint firstItem="7HO-oj-j0f" firstAttribute="leading" secondItem="C0Y-Ra-ufE" secondAttribute="leading" id="hJK-L9-RAZ"/>
+                            <constraint firstAttribute="trailing" secondItem="7HO-oj-j0f" secondAttribute="trailing" id="lhn-Sp-SfB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LQR-Ci-iX1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4oD-e5-Y9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="729"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weibo.png" width="719" height="1021"/>
+    </resources>
+</document>
